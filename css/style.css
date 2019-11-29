@@ -4,6 +4,39 @@
     box-sizing: border-box;
 }
 
-ul li {
-    display: inline-block;
+ul, ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-color: #FFF;
+}
+
+#header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* height: 100px; 
+    background-color: #c2c2c2;  */
+}
+
+.navigation ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navigation ul li a {
+    padding: 20px;
+}
+
+#wrapper {
+    margin: 0px auto;
+    width: 80%;
+    /* background-color: #c2c2c2; 
+    height: 1000px;  */
 }
