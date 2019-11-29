@@ -67,7 +67,7 @@ body {
   justify-content: space-around;
   flex-direction: column;
   padding-top: 10px;
-  visibility: hidden;
+  display: none;
 }
 
 #dropdown li {
