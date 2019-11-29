@@ -1,7 +1,17 @@
+@font-face {
+    font-family: "logoFont";
+    src: url(../fonts/TESLA.ttf);
+}
+@font-face {
+    font-family: "mainFont";
+    src: url(../fonts/GRAVITY.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: mainFont;
 }
 
 ul, ol {
@@ -11,6 +21,13 @@ ul, ol {
 a {
     text-decoration: none;
     color: #000;
+}
+
+h1 {
+    font-family: logoFont;
+    color: rgb(177, 0, 0);
+    font-size: 3.5em;
+    text-transform: uppercase;    
 }
 
 body {
@@ -26,14 +43,44 @@ body {
     background-color: #c2c2c2;  */
 }
 
+.navigation {
+    padding: 10px;
+    /*border-bottom: 1px solid rgba(136, 2, 2, 0.589);
+    box-shadow: 0px 1px 0px rgb(177, 0, 0);  ==> Add after stick through JS?*/
+    position: sticky;
+    top: 0px; /*After content, check sticky*/
+}
+
 .navigation ul {
     display: flex;
     justify-content: space-around;
 }
 
 .navigation ul li a {
-    padding: 20px;
+    font-size: 1.2em;
+    padding: 10px 5px;
 }
+
+.link {
+    position: relative;
+}
+
+.link:after{
+    content: '';
+    position: absolute;
+    width: 0; height: 5px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: rgb(177, 0, 0);
+    transition: width .2s ease;
+    -webkit-transition: width .2s ease;
+  }
+  .link:hover:after{
+    width: 100%;
+    left: 0;
+    background: rgb(177, 0, 0);
+  }
 
 #wrapper {
     margin: 0px auto;
