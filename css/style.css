@@ -43,16 +43,16 @@ body {
 }
 
 #wrapper {
-    width: 85%;
     margin: 0px auto;
 }
 
 .navigation {
     background-color: #FFF;
     padding: 10px;
-    /*box-shadow: 0px 1px 0px rgb(177, 0, 0);  ==> Add after stick through JS?*/
     position: sticky;
     top: 0px; /*After content, check sticky*/
+    z-index: 1;
+    box-shadow: 0px 5px 5px -4px rgb(177, 0, 0);
 }
 
 .navigation ul {
@@ -71,10 +71,11 @@ body {
   justify-content: space-around;
   flex-direction: column;
   margin-top: 10px;
-  padding-top: 10px;
+  padding: 10px;
   display: none;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
 }
 
 #dropdown li {
@@ -93,9 +94,9 @@ body {
 .link:after{
     content: '';
     position: absolute;
-    width: 0; height: 5px;
+    width: 0; height: 3px;
     display: block;
-    margin-top: 5px;
+    margin-top: 3px;
     right: 0;
     background: rgb(177, 0, 0);
     transition: width .2s ease;
@@ -109,31 +110,13 @@ body {
 
 .main {
     margin: 0px auto;
+}
+
+#hero {
+    
+}
+
+.textSection {
     width: 80%;
-    /* background-color: #c2c2c2;
-    height: 1000px;  */
-}
-
-#socialHold {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    width: 55px;
-}
-
-#socialMenu {
-    font-size: 2em;
-    display: none;
-    background-color: rgb(177, 0, 0);
-    padding: 5px 15px;
-}
-
-#socialButton {
-    cursor: pointer;
-    background-color: rgb(177, 0, 0);
-    font-size: 2.5em;
-    padding: 0px 15px;
-    width: 100%;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    margin: 0px auto;
 }

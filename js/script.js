@@ -1,6 +1,12 @@
 $(document).ready(function(){
   navHover();
   socialMenu();
+
+  $('.single-item').slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    zIndex: 0
+  });
 });
 
 function socialMenu(){
