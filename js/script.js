@@ -2,13 +2,16 @@ $(document).ready(function(){
   navHover();
   socialMenu();
 
+  //SLICK PLUGIN START
   $('.single-item').slick({
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 3000,
+    speed: 3500,
     zIndex: 0,
     dots: true,
     arrows: true,
   });
+  //SLICK PLUGIN END
 });
 
 function socialMenu(){

@@ -112,6 +112,7 @@ body {
     margin: 0px auto;
 }
 
+/*SLICK PLUGIN START*/
 .slick-next, .slick-prev {
     z-index: 1;
 }
@@ -127,6 +128,7 @@ body {
 .slick-prev {
     left: 20px;
 }
+/*SLICK PLUGIN END*/
 
 .textSection {
     width: 80%;
