@@ -112,8 +112,20 @@ body {
     margin: 0px auto;
 }
 
-#hero {
-    
+.slick-next, .slick-prev {
+    z-index: 1;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 50px;
+}
+
+.slick-next {
+    right: 45px;
+}
+
+.slick-prev {
+    left: 20px;
 }
 
 .textSection {

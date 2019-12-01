@@ -5,7 +5,9 @@ $(document).ready(function(){
   $('.single-item').slick({
     autoplay: true,
     autoplaySpeed: 2000,
-    zIndex: 0
+    zIndex: 0,
+    dots: true,
+    arrows: true,
   });
 });
 
