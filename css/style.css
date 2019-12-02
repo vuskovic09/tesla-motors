@@ -130,7 +130,54 @@ body {
 }
 /*SLICK PLUGIN END*/
 
-.textSection {
-    width: 80%;
+#textWrap {
+    width: 95%;
     margin: 0px auto;
+}
+
+.titleDivider {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.textSection {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.underline {
+    position: relative;
+    
+}
+
+.underline:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    display: block;
+    margin-top: 10px;
+    left: 0;
+    background: rgb(177, 0, 0);
+}
+
+.paragraph {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+#showMore, #hide {
+    width: 12%;
+    margin: 25px auto;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#hide {
+    width: 6%;
+}
+
+#hiddenPara, #hide {
+    display: none;
 }

@@ -1,6 +1,7 @@
 $(document).ready(function(){
   navHover();
-  socialMenu();
+  paragraphShow();
+  paragraphHide();
 
   //SLICK PLUGIN START
   $('.single-item').slick({
@@ -14,31 +15,30 @@ $(document).ready(function(){
   //SLICK PLUGIN END
 });
 
-function socialMenu(){
-    let menu = $("#socialMenu");
-    let button = $("#socialButton")
+function paragraphShow(){
+    let para = $("#hiddenPara");
+    let button = $("#showMore");
+    let buttonHide = $('#hide')
 
     button.click(function(){
-      if(menu.hasClass("opened")){
-        menu.removeClass("opened");
-        setTimeout(function(){
-          button.css({
-          "border-bottom-right-radius": "5px"
-          });
-        }, 500);
-        menu.slideUp(500);
-      } 
-      else {
-        menu.addClass("opened");
-        button.css({
-          "border-bottom-right-radius": "0px"
-        });
-        menu.css({
-          "border-bottom-right-radius": "5px"
-        });
-        menu.slideDown(500);
-      }
+      para.addClass("opened");
+      para.slideDown(500);
+      button.slideUp(600);
+      buttonHide.slideDown(600);
     });
+}
+
+function paragraphHide() {
+  let para = $('#hiddenPara');
+  let button = $('#showMore');
+  let buttonHide = $('#hide');
+  
+  buttonHide.click(function(){
+    para.removeClass("opened");
+    para.slideUp(500);
+    button.slideDown(600);
+    buttonHide.slideUp(600);
+  });
 }
 
 function navHover(){
