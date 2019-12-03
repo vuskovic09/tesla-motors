@@ -28,7 +28,7 @@ function paragraphShow(){
     });
 }
 
-function paragraphHide() {
+function paragraphHide(){
   let para = $('#hiddenPara');
   let button = $('#showMore');
   let buttonHide = $('#hide');
