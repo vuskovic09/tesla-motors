@@ -1,8 +1,7 @@
 $(document).ready(function(){
   navHover();
   heroImages();
-  paragraphShow();
-  paragraphHide();
+  aboutParagraph();
 
   //SLICK PLUGIN START
   $('.single-item').slick({
