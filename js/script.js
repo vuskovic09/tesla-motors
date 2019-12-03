@@ -2,6 +2,7 @@ $(document).ready(function(){
   navHover();
   heroImages();
   aboutParagraph();
+  modelInfo();
 
   //SLICK PLUGIN START
   $('.single-item').slick({
@@ -38,6 +39,7 @@ function heroImages(){
     ispis += '<img class="heroIMG" src="images/' + images[i] + '.jpg" alt="Hero image' + i + '"/>';
   };
   hero.html(ispis);
+  //Convert to native JS?
 }
 
 function aboutParagraph(){
@@ -60,29 +62,36 @@ function aboutParagraph(){
 
 }
 
-// function paragraphShow(){
-//     let para = $("#hiddenPara");
-//     let button = $("#showMore");
-//     let buttonHide = $('#hide')
+function modelInfo(){
+  let div = document.getElementById('models');
+  let models = ['Model X', 'Model Y', 'Model 3', 'Model S', 'Roadster',  'Cybertruck'];
+  let date = [];
+  let range = [];
+  let price = [];
 
-//     button.click(function(){
-//       para.addClass("opened");
-//       para.slideDown(500);
-//       button.slideUp(600);
-//       buttonHide.slideDown(600);
-//       buttonHide.css('display', 'inline-block');
-//     });
-// }
-
-// function paragraphHide(){
-//   let para = $('#hiddenPara');
-//   let button = $('#showMore');
-//   let buttonHide = $('#hide');
-  
-//   buttonHide.click(function(){
-//     para.removeClass("opened");
-//     para.slideUp(500);
-//     button.slideDown(600);
-//     buttonHide.slideUp(600);
-//   });
-// }
+  div.innerHTML = '';
+  for (i = 0; i < models.length; i++){
+    div.innerHTML += 
+    `<div class="modelInfo">
+      <img class="modelIMG" src="images/" alt="" />
+      <table class="modelInfo">
+        <tr>
+          <td>Name:</td>
+          <td>${models[i]}</td>
+        </tr>
+        <tr>
+          <td>Date:</td>
+          <td>${date[i]}</td>
+        </tr>
+        <tr>
+          <td>Range:</td>
+          <td>${range[i]}</td>
+        </tr>
+        <tr>
+          <td>Price:</td>
+          <td>${price[i]}</td>
+        </tr>
+      </table>
+    </div>`;
+  }
+}
