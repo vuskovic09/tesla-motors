@@ -130,11 +130,6 @@ body {
 }
 /*SLICK PLUGIN END*/
 
-/* #textWrap {
-    width: 95%;
-    margin: 0px auto;
-} */
-
 .titleDivider {
     margin: 50px auto;
     display: flex;
@@ -179,7 +174,6 @@ body {
     cursor: pointer;
     font-size: 1.2em;
 }
-
 
 #hiddenPara, #hide {
     display: none;
