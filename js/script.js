@@ -64,16 +64,18 @@ function aboutParagraph(){
 
 function modelInfo(){
   let div = document.getElementById('models');
-  let models = ['Model X', 'Model Y', 'Model 3', 'Model S', 'Roadster',  'Cybertruck'];
-  let date = [];
-  let range = [];
-  let price = [];
+  let img = ['modelX.jpg', 'modelY.jpg', 'modelS.jpg', 'model3.jpg', 'roadster.jpg', 'cybertruck.jpg']
+  let models = ['Model X', 'Model Y', 'Model S', 'Model 3', 'Roadster',  'Cybertruck'];
+  let date = ['September 2015', 'November 2019', 'June 2012', 'July 2017', '2020', '2020'];
+  let range = ['523km', '483km', '600km', '402km', '997km', '804km'];
+  let price = ['$84,990', '$39,000', '$79,990', '$36,000', '$200,000', '$39,900'];
 
   div.innerHTML = '';
   for (i = 0; i < models.length; i++){
     div.innerHTML += 
     `<div class="modelInfo">
-      <img class="modelIMG" src="images/" alt="" />
+      <div class="information">
+      <img class="modelIMG" src="images/${img[i]}" alt="" />
       <table class="modelInfo">
         <tr>
           <td>Name:</td>
@@ -92,6 +94,11 @@ function modelInfo(){
           <td>${price[i]}</td>
         </tr>
       </table>
-    </div>`;
+      </div>
+      <span>
+      <a class="buttonInfo" href="#">Show More</a>
+    </span>
+    </div>
+    `;
   }
 }
