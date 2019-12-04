@@ -33,13 +33,11 @@ function navHover(){
 
 function heroImages(){
   let images = ['hero0', 'hero1', 'hero2', 'hero3', 'hero4', 'hero5'];
-  let hero = $('#hero');
-  let ispis = '';
+  let hero = document.getElementById('hero');
+  hero.innerHTML = '';
   for(i = 0; i < images.length; i++) {
-    ispis += '<img class="heroIMG" src="images/' + images[i] + '.jpg" alt="Hero image' + i + '"/>';
+    hero.innerHTML += '<img class="heroIMG" src="images/' + images[i] + '.jpg" alt="Hero image' + i + '"/>';
   };
-  hero.html(ispis);
-  //Convert to native JS?
 }
 
 function aboutParagraph(){
@@ -96,7 +94,7 @@ function modelInfo(){
       </table>
       </div>
       <span>
-      <a class="buttonInfo" href="#">Show More</a>
+      <a class="buttonInfo" href="#">More info</a>
     </span>
     </div>
     `;
