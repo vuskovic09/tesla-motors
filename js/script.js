@@ -6,6 +6,9 @@ $(document).ready(function(){
   detailsLoad();
   $('.singleModel').filter(':even').css("flex-direction", "row-reverse");
 
+  formValidation();
+
+
   //SLICK PLUGIN START
   $('.single-item').slick({
     autoplay: true,
@@ -105,7 +108,7 @@ function modelLoad(){
 
   }
 
-  function detailsLoad() {
+function detailsLoad(){
     let detailDivs = document.getElementById('modelDetails');
     let detailIMG = ['detailsX.jpg', 'detailsY.jpg', 'detailsS.jpg', 'details3.jpg', 'detailsRoadster.jpg', 'detailsCybertruck.jpg']
     let models = ['Model X', 'Model Y', 'Model S', 'Model 3', 'Roadster',  'Cybertruck'];
@@ -148,4 +151,11 @@ function modelLoad(){
         </article>`
     }
     
+}
+
+function formValidation(){
+  var reFName, reLName, reEmail;
+  reFName = /^[A-Z][a-z]{1,13}$/;
+  reLName = /^([A-Z][a-z]{1,30}\s?)+$/;
+  reEmail = /^[a-z][a-z\d\_\.\-]+\@[a-z\d]+(\.[a-z]{2,4})+$/;
 }
