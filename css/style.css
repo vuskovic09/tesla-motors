@@ -23,15 +23,16 @@ a {
     color: #000;
 }
 
-h1 {
+
+body {
+  background-color: #FFF;
+}
+
+.logo {
     font-family: logoFont;
     color: rgb(177, 0, 0);
     font-size: 3.5rem;
     text-transform: uppercase;
-}
-
-body {
-    background-color: #FFF;
 }
 
 #header {
@@ -243,7 +244,7 @@ body {
     width: 50%;
 }
 
-/*CONTACT*/
+/* CONTACT SECTION */
 
 input {
 	outline: none;
@@ -264,7 +265,6 @@ label {
   margin: 0;
 }
 
-/*---------------------------------------------*/
 button {
 	outline: none !important;
 	border: none;
@@ -278,9 +278,6 @@ button:hover {
 iframe {
 	border: none !important;
 }
-
-
-/* Contact */
 
 .contactContainer {
   width: 100%;  
@@ -300,8 +297,7 @@ iframe {
 }
 
 
-/*==================================================================
-[ Form ]*/
+/* Form */
 
 .contactForm {
   width: 100%;
@@ -322,8 +318,7 @@ iframe {
 
 
 
-/*------------------------------------------------------------------
-[ Input ]*/
+/* Input */
 
 .inputWrap {
   width: 100%;
@@ -362,8 +357,6 @@ textarea.formInput {
   padding-bottom: 15px;
 }
 
-/*---------------------------------------------*/
-
 .focus-formInput {
   position: absolute;
   display: block;
@@ -388,8 +381,7 @@ textarea.formInput {
 
 
 
-/*------------------------------------------------------------------
-[ Button ]*/
+/* Button */
 .contactContainer-form-btn {
   width: 100%;
   display: flex;
@@ -433,19 +425,45 @@ textarea.formInput {
 .contactForm-btn:hover:before {
   opacity: 0;
 }
-  
-/*---------------------------------------------*/
-@media (max-width: 576px) {
-  .btn-hide-validate {
-    right: 10px;
-  }
-  .true-validate::after {
-    right: 10px;
-  }
+
+.formError {
+  color: rgb(177, 0, 0);
 }
 
-/*------------------------------------------------------------------
-[ Responsive ]*/
+#footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  box-shadow: 0px 5px 5px 4px rgb(177, 0, 0);
+}
+
+.footerBlock {
+  width: 33%;
+  height: inherit;
+  border-right: 1px solid rgba(177, 0, 0, 0.68);
+}
+
+.footerBlock:last-child {
+  border-right: none;
+}
+.footerBlock ul {
+  height: inherit;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerBlock ul li {
+  margin-top: 10px;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+
+}
 
 @media (max-width: 768px) {
     .contactWrap {

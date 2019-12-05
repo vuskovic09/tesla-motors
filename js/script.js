@@ -6,8 +6,45 @@ $(document).ready(function(){
   detailsLoad();
   $('.singleModel').filter(':even').css("flex-direction", "row-reverse");
 
-  formValidation();
 
+  var footerNav = document.querySelector('#footerNav ul');
+  footerNav.innerHTML = '';
+  var navElements = ['Home', 'About us', 'Model X', 'Model Y', 'Model S', 'Model 3', 'Rodaster', 'Cybertruck']
+  for (i = 0; i < navElements.length; i++){
+    footerNav.innerHTML += `<li><a href="#" class="link">${navElements[i]}</a></li>`;
+  }
+
+  document.getElementById('validationButton').addEventListener('click', function(e){
+    e.preventDefault();
+    var fName, lName, phoneNum, eMail, reFName, reLName, reEmail;
+    fName = document.getElementById('first-name');
+    reFName = /^[A-Z][a-z]{1,13}$/;
+    fNameErr = document.getElementById('fNameErr');
+
+    lName = document.getElementById('last-name');
+    reLName = /^([A-Z][a-z]{1,30}\s?)+$/;
+    lNameErr = document.getElementById('lNameErr')
+
+    eMail = document.getElementById('email');
+    reEmail = /^[a-z][a-z\d\_\.\-]+\@[a-z\d]+(\.[a-z]{2,4})+$/;
+    eMailErr = document.getElementById('eMailErr');
+    
+    if(!reFName.test(fName.value.trim())){
+      fNameErr.innerHTML = 'First name has to start with a capital letter and contain 1-13 characters.';
+    } else {
+      fNameErr.innerHTML = '';
+    }
+    if(!reLName.test(lName.value.trim())){
+      lNameErr.innerHTML = 'Last name has to start with a capital letter and contain 1-30 characters.';
+    } else {
+      lNameErr.innerHTML = '';
+    }
+    if(!reEmail.test(eMail.value.trim())){
+      eMailErr.innerHTML = 'E-mail address has to be in the following format: <i>example@example.com</i>';
+    } else {
+      eMailErr.innerHTML = '';
+    }
+  });
 
   //SLICK PLUGIN START
   $('.single-item').slick({
@@ -153,9 +190,6 @@ function detailsLoad(){
     
 }
 
-function formValidation(){
-  var reFName, reLName, reEmail;
-  reFName = /^[A-Z][a-z]{1,13}$/;
-  reLName = /^([A-Z][a-z]{1,30}\s?)+$/;
-  reEmail = /^[a-z][a-z\d\_\.\-]+\@[a-z\d]+(\.[a-z]{2,4})+$/;
+function formValidation(e){
+  
 }

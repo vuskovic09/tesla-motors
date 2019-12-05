@@ -12,7 +12,7 @@
 </head>
 <body>
 	<header id="header">
-		<h1 class title="headerTitle">Tesla Motors</h1>
+		<h1 class="logo">Tesla Motors</h1>
 	</header>
 	<div id="wrapper">
 		<nav class="navigation">
@@ -30,8 +30,7 @@
 						<li><a class="link" href="#">Cybertruck</a></li>
 					</ul>
 				</li>
-				<li><a class="link" href="#">Order</a></li>
-				<li><a class="link" href="#">Contact</a></li>
+				<li><a class="link" href="#">Contact us</a></li>
 			</ul>
 		</nav>
 		<div id="hero" class="single-item">
@@ -66,35 +65,33 @@
 						</span>
 		
 						<label class="inputLabel" for="first-name">Your Name *</label>
-						<div class="inputWrap validate-input">
+						<span id="fNameErr" class="formError"></span>
+						<div class="inputWrap">
 							<input id="first-name" class="formInput" type="text" name="first-name" placeholder="First name">
 							<span class="focus-formInput"></span>
 						</div>
-						<div class="inputWrap validate-input">
-							<input class="formInput" type="text" name="last-name" placeholder="Last name">
+						
+						<span id="lNameErr" class="formError"></span>
+						<div class="inputWrap">
+							<input id="last-name" class="formInput" type="text" name="last-name" placeholder="Last name">
 							<span class="focus-formInput"></span>
 						</div>
 		
 						<label class="inputLabel" for="email">Email Address *</label>
-						<div class="inputWrap validate-input">
+						<span id="eMailErr" class="formError"></span>
+						<div class="inputWrap">
 							<input id="email" class="formInput" type="text" name="email" placeholder="Eg. example@email.com">
 							<span class="focus-formInput"></span>
 						</div>
 		
-						<label class="inputLabel" for="phone">Phone Number</label>
-						<div class="inputWrap">
-							<input id="phone" class="formInput" type="text" name="phone" placeholder="Eg. +1 800 000000">
-							<span class="focus-formInput"></span>
-						</div>
-		
 						<label class="inputLabel" for="message">Message *</label>
-						<div class="inputWrap validate-input">
-							<textarea id="message" class="formInput" name="message" placeholder="Please enter your comments..."></textarea>
+						<div class="inputWrap">
+							<textarea id="message" class="formInput" name="message" placeholder="Please enter your message..."></textarea>
 							<span class="focus-formInput"></span>
 						</div>
 		
 						<div class="contactContainer-form-btn">
-							<button class="contactForm-btn">
+							<button id="validationButton" class="contactForm-btn">
 								<span>
 									Submit
 								</span>
@@ -105,8 +102,24 @@
 			</div>
 		</main>
 
-		<footer id="footer"> 
-
+		<footer id="footer">
+			<div id="footerNav" class="footerBlock">
+				<ul><!-- Dynamically loaded nav --></ul>
+			</div>
+			<div class="footerBlock">
+				<ul>
+					<li>&copy;Filip Vuskovic 143/17 - All rights reserved</a></li>
+					<li><a href="sitemap.xml">SITEMAP</a>&nbsp;|&nbsp;<a href="documentation.pdf">DOCUMENTATION</a>&nbsp;|<a href="robots.txt">ROBOTS</a>|&nbsp;<a href="author.html">WEBPAGE AUTHOR</a></li>
+					<li><a href="#" class="logo">TESLA MOTORS</a></li>
+				</ul>
+			</div>
+			<div class="footerBlock footerResponsive" id="contact">
+				<ul>
+					<li><span class="fas fa-map-marker-alt"></span> Location: 860 Washington St. New York, NY 10014</li>
+					<li><span class="fas fa-phone-volume"></span> Phone: (212) 206-1204</li>
+					<li><span class="fas fa-at"></span> E-Mail: tesla.biz&#64;teslamotors.com</li>						
+				</ul>
+			</div>
 		</footer>
 	</div>
 
