@@ -1,16 +1,13 @@
 $(document).ready(function(){
-  //SLICK PLUGIN START
-  let url = 'https://vuskovic09.github.io/tesla-motors/';
-  if(url.indexOf('index.html')){
-    $('.single-item').slick({
-      autoplay: true,
-      autoplaySpeed: 3000,
-      speed: 3500,
-      zIndex: 0,
-      dots: true,
-      arrows: true,
-    });
-  }
+  //SLICK PLUGIN START 
+  $('.single-item').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 3500,
+    zIndex: 0,
+    dots: true,
+    arrows: true,
+  });
   //SLICK PLUGIN END
 
   navHover();
