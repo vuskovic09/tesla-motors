@@ -1,15 +1,4 @@
 $(document).ready(function(){
-  //SLICK PLUGIN START 
-  $('.single-item').slick({
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 3500,
-    zIndex: 0,
-    dots: true,
-    arrows: true,
-  });
-  //SLICK PLUGIN END
-
   navHover();
   heroImages();
   aboutParagraph();
@@ -62,6 +51,16 @@ $(document).ready(function(){
   });
   //FORM VALIDATION END
 
+  //SLICK PLUGIN START
+  $('.single-item').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 3500,
+    zIndex: 0,
+    dots: true,
+    arrows: true,
+  });
+  //SLICK PLUGIN END
 
   //SCROLL FUNCTIONALITY
   $(document).bind('scroll', function(){
