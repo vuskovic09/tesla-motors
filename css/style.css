@@ -493,10 +493,38 @@ textarea.formInput {
   .modelIMG {
     max-width: 50%;
     margin: auto;
+  }  
+
+  #footer {
+    font-size: 12px;
+  }
+
+  #footer .logo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #footer {
+    font-size: 16px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerBlock {
+    border-right: none;
+    border-bottom: 1px solid rgb(177, 0, 0);
+
+    padding-bottom: 5px;
+  }
+
+  .footerBlock:last-of-type {
+    border: none;
   }
 }
 
 @media screen and (max-width: 900px) {
+
   .titleDivider {
     font-size: 20px;
   }
@@ -510,6 +538,10 @@ textarea.formInput {
   }
   .modelInfo {
     width: 45%;
+  }
+
+  #toTop {
+    display: none!important;
   }
 }
 
@@ -536,6 +568,14 @@ textarea.formInput {
   @media (max-width: 576px) {
     .contactWrap {
       padding: 55px 15px 68px 15px;
-    }  
+    } 
+
+    .navigation ul li a {
+      font-size: 14px;
+    }
+
+    #footer {
+      font-size: 12px;
+    }
   }
   

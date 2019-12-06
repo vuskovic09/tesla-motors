@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  let url = 'https://vuskovic09.github.io/tesla-motors/';
+  if(url.indexOf('index.html') != -1){
+  
   navHover();
   heroImages();
   aboutParagraph();
@@ -134,6 +137,7 @@ $(document).ready(function(){
 
   });
   //NAVIGATION CLICK-SCROLL END
+}
 });
 
 
