@@ -10,8 +10,9 @@ $(document).ready(function(){
   var footerNav = document.querySelector('#footerNav ul');
   footerNav.innerHTML = '';
   var navElements = ['Home', 'About us', 'Model X', 'Model Y', 'Model S', 'Model 3', 'Rodaster', 'Cybertruck']
+  var hrefs = ['header', 'about', 'ModelX', 'ModelY', 'ModelS', 'Model3', 'Roadster', 'Cybertruck']
   for (i = 0; i < navElements.length; i++){
-    footerNav.innerHTML += `<li><a href="#" class="link">${navElements[i]}</a></li>`;
+    footerNav.innerHTML += `<li><a href="${hrefs[i]}" class="link">${navElements[i]}</a></li>`;
   }
   //FOOTER NAVIGATION END
 
@@ -61,6 +62,7 @@ $(document).ready(function(){
   });
   //SLICK PLUGIN END
 
+  //SCROLL FUNCTIONALITY
   $(document).bind('scroll', function(){
     var scrollOffset = $(document).scrollTop();
     var containerOffsetHome = $('#header').offset().top - window.innerHeight;
@@ -92,13 +94,15 @@ $(document).ready(function(){
       $('#toTop').fadeIn('500');
     }
   });
+  //SCROLL FUNCTIONALITY END
 
+  //NAVIGATION CLICK-SCROLL
   $('.buttonInfo').click(function(event){
   	event.preventDefault();
   	var target = $(this).attr('href');
 
     $('html, body').animate({
-      scrollTop: $("#" + target).offset().top / 1.15
+      scrollTop: $("#" + target).offset().top - 2.5 * $('#headerNav').height()
     }, 500);
  	});
 
@@ -107,7 +111,16 @@ $(document).ready(function(){
   	var target = $(this).attr('href');
 
     $('html, body').animate({
-      scrollTop: $("#" + target).offset().top / 1.15
+      scrollTop: $("#" + target).offset().top - 2.5 * $('#headerNav').height()
+    }, 500);
+   });
+   
+   $('#footerNav').find('a').click(function(event){
+  	event.preventDefault();
+  	var target = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $("#" + target).offset().top - 2.5 * $('#headerNav').height()
     }, 500);
  	});
 
@@ -116,10 +129,11 @@ $(document).ready(function(){
 		var target = $(this).attr('href');
 
     $('html, body').animate({
-      scrollTop: $("#" + target).offset().top / 1.15
+      scrollTop: $("#" + target).offset().top
     }, 500);
 
   });
+  //NAVIGATION CLICK-SCROLL END
 });
 
 
@@ -167,7 +181,7 @@ function aboutParagraph(){
 }
 
 function modelLoad(){
-  let modelDivs = document.getElementById('models');
+  let modelDivs = document.getElementById('modelsLoad');
   let imgModels = ['modelX.jpg', 'modelY.jpg', 'modelS.jpg', 'model3.jpg', 'roadster.jpg', 'cybertruck.jpg']
   let models = ['Model X', 'Model Y', 'Model S', 'Model 3', 'Roadster',  'Cybertruck'];
   let date = ['September 2015', 'November 2019', 'June 2012', 'July 2017', '2020', '2020'];
@@ -255,8 +269,4 @@ function detailsLoad(){
         </div>`;
     }
     
-}
-
-function formValidation(e){
-  
 }
