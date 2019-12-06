@@ -1,7 +1,18 @@
 $(document).ready(function(){
+  //SLICK PLUGIN START
   let url = 'https://vuskovic09.github.io/tesla-motors/';
   if(url.indexOf('index.html') != -1){
-  
+    $('.single-item').slick({
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 3500,
+      zIndex: 0,
+      dots: true,
+      arrows: true,
+    });
+  }
+  //SLICK PLUGIN END
+
   navHover();
   heroImages();
   aboutParagraph();
@@ -54,16 +65,6 @@ $(document).ready(function(){
   });
   //FORM VALIDATION END
 
-  //SLICK PLUGIN START
-  $('.single-item').slick({
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 3500,
-    zIndex: 0,
-    dots: true,
-    arrows: true,
-  });
-  //SLICK PLUGIN END
 
   //SCROLL FUNCTIONALITY
   $(document).bind('scroll', function(){
@@ -137,7 +138,6 @@ $(document).ready(function(){
 
   });
   //NAVIGATION CLICK-SCROLL END
-}
 });
 
 
