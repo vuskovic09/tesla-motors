@@ -219,6 +219,8 @@ body {
 }
 
 .modelIMG {
+    max-width: 100%;
+    height: auto;
     border-radius: 10%;
     box-shadow: 0px 5px 5px -4px rgb(177, 0, 0);
 }
@@ -479,15 +481,57 @@ textarea.formInput {
 
 /* Responsive */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1240px) {
+  .singleModel {
+    flex-direction: column!important;
+  }
+  .detailsParagraph {
+    width: 100%;
+    padding: 15px;
+  }
 
+  .modelIMG {
+    max-width: 50%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .titleDivider {
+    font-size: 20px;
+  }
+  
+  #hero {
+    display: none;
+  }
+
+  .active:after {
+    width: 0;
+  }
+  .modelInfo {
+    width: 45%;
+  }
 }
 
 @media (max-width: 768px) {
     .contactWrap {
       padding: 55px 45px 68px 45px;
     }
+}
+
+@media screen and (max-width: 750px){
+  .detailsParagraph {
+     font-size: 14px;
   }
+  
+  .modelIMG {
+    max-width: 100%;
+  }
+
+  .modelInfo {
+    width: 95%;
+  }
+}
   
   @media (max-width: 576px) {
     .contactWrap {
