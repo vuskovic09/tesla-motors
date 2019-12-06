@@ -108,9 +108,27 @@ body {
     background: rgb(177, 0, 0);
 }
 
+.active:after {
+  width: 100%;
+  left: 0;
+  background: rgb(177, 0, 0);
+}
+
 #main {
     width: 80%;
     margin: 0px auto;
+}
+
+#toTop {
+  padding: 30px;
+  background-color: rgb(177, 0, 0);
+  position: fixed;
+  right: 70px;
+  bottom: 120px;
+  border-radius: 100%;
+  opacity: 0.95;
+  display: none;
+  z-index: 1;
 }
 
 /*SLICK PLUGIN START*/

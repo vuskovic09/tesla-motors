@@ -6,14 +6,17 @@ $(document).ready(function(){
   detailsLoad();
   $('.singleModel').filter(':even').css("flex-direction", "row-reverse");
 
-
+  //FOOTER NAVIGATION
   var footerNav = document.querySelector('#footerNav ul');
   footerNav.innerHTML = '';
   var navElements = ['Home', 'About us', 'Model X', 'Model Y', 'Model S', 'Model 3', 'Rodaster', 'Cybertruck']
   for (i = 0; i < navElements.length; i++){
     footerNav.innerHTML += `<li><a href="#" class="link">${navElements[i]}</a></li>`;
   }
+  //FOOTER NAVIGATION END
 
+
+  //FORM VALIDATION
   document.getElementById('validationButton').addEventListener('click', function(e){
     e.preventDefault();
     var fName, lName, phoneNum, eMail, reFName, reLName, reEmail;
@@ -45,6 +48,7 @@ $(document).ready(function(){
       eMailErr.innerHTML = '';
     }
   });
+  //FORM VALIDATION END
 
   //SLICK PLUGIN START
   $('.single-item').slick({
@@ -56,6 +60,66 @@ $(document).ready(function(){
     arrows: true,
   });
   //SLICK PLUGIN END
+
+  $(document).bind('scroll', function(){
+    var scrollOffset = $(document).scrollTop();
+    var containerOffsetHome = $('#header').offset().top - window.innerHeight;
+    var containerOffsetAbout = $('#about').offset().top - window.innerHeight/2;
+    var containerOffsetModels = $('#models').offset().top - window.innerHeight/2;
+    var containerOffsetContact = $('#contact').offset().top - window.innerHeight/2;
+
+    if (scrollOffset > containerOffsetHome) {
+			$('#headerNav ul li a').removeClass('active');
+			$('#home').addClass('active');
+    }
+    if (scrollOffset > containerOffsetAbout) {
+			$('#headerNav ul li a').removeClass('active');
+			$('#aboutNav').addClass('active');
+    }
+    if (scrollOffset > containerOffsetModels) {
+			$('#headerNav ul li a').removeClass('active');
+			$('#modelsNav').addClass('active');
+    }
+    if (scrollOffset > containerOffsetContact) {
+			$('#headerNav ul li a').removeClass('active');
+			$('#contactNav').addClass('active');
+		}
+
+    if ($('#home').hasClass('active')){
+      $('#toTop').fadeOut('500');
+    }
+    else {
+      $('#toTop').fadeIn('500');
+    }
+  });
+
+  $('.buttonInfo').click(function(event){
+  	event.preventDefault();
+  	var target = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $("#" + target).offset().top / 1.15
+    }, 500);
+ 	});
+
+  $('.navigation').find('a').click(function(event){
+  	event.preventDefault();
+  	var target = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $("#" + target).offset().top / 1.15
+    }, 500);
+ 	});
+
+	$('#toTop').click(function(event){
+		event.preventDefault();
+		var target = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $("#" + target).offset().top / 1.15
+    }, 500);
+
+  });
 });
 
 
@@ -136,14 +200,15 @@ function modelLoad(){
       </table>
       </div>
       <span>
-      <a class="buttonInfo" href="#">More info</a>
+      <a class="buttonInfo" href="${models[i].replace(/\s+/g, '')}">More info</a>
     </span>
     </div>
     `;
   }
 
 
-  }
+
+}
 
 function detailsLoad(){
     let detailDivs = document.getElementById('modelDetails');
@@ -179,13 +244,15 @@ function detailsLoad(){
     detailDivs.innerHTML = '';
     for (i = 0; i < detailIMG.length; i++){
       detailDivs.innerHTML += 
-        `<div class="titleDivider">
-          <h2 class="underline">${models[i]}</h2>
-        </div>
-        <article class="singleModel">
-          <img class ="modelIMG" src="images/${detailIMG[i]}" alt ="Tesla ${models[i]} details" />
-          <p class="detailsParagraph">${modelTexts[i]}</p>
-        </article>`
+        `<div  id="${models[i].replace(/\s+/g, '')}">
+          <div class="titleDivider">
+            <h2 class="underline">${models[i]}</h2>
+          </div>
+          <article class="singleModel">
+            <img class ="modelIMG" src="images/${detailIMG[i]}" alt ="Tesla ${models[i]} details" />
+            <p class="detailsParagraph">${modelTexts[i]}</p>
+          </article>
+        </div>`;
     }
     
 }
