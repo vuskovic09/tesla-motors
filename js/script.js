@@ -1,7 +1,7 @@
 $(document).ready(function(){
   //SLICK PLUGIN START
   let url = 'https://vuskovic09.github.io/tesla-motors/';
-  if(url.indexOf('index.html') = -1){
+  if(url.indexOf('index.html')){
     $('.single-item').slick({
       autoplay: true,
       autoplaySpeed: 3000,
